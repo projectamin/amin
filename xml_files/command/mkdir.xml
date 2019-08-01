@@ -1,0 +1,6 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+        <amin:command name="mkdir">
+                <amin:param name="target">/tmp/amin-tests/my_new_dir</amin:param>
+                <amin:flag>p</amin:flag>
+        </amin:command>
+</amin:profile>
