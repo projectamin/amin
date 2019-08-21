@@ -3,8 +3,7 @@
 	        Please see the LICENSE file included with this distribution 
 	-->
 	<!--what type of machine is this? -->
-	<name>Amin::Machine::Dispatcher</name>	
-
+	<name>Amin::Machine::Dispatcher</name>
 <!--
 	uncomment to test the machine_spec.xml/amin machine
 	<filter name="Amin::Command::Mkdir">
