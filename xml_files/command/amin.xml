@@ -1,0 +1,5 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+        <amin:command name="amin">
+                <amin:param name="version">0.7.5</amin:param>
+        </amin:command>
+</amin:profile>
