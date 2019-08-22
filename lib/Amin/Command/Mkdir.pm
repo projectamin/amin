@@ -69,9 +69,9 @@ sub end_element {
 
           my $success;
           if ($dir) {
-               $success = "Making directories in $dir (perm: =";
+               $success = "Created directories in $dir (perm: =";
           } else {
-               $success = "Making directories (perm: =";
+               $success = "Created directories (perm: =";
           }
           if ($mode) {
                $success .= "$mode" 
