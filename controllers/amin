@@ -1,0 +1,116 @@
+#!/usr/bin/perl
+
+#LICENSE:
+
+#Please see the LICENSE file included with this distribution 
+
+use strict;
+use FindBin qw($Bin);
+use lib ("$Bin/../lib");
+use Amin;
+use Amin::Controller::CLI;
+#use Amin::Controller::CLIOutput;
+
+my $cli = Amin::Controller::CLI->new();
+my $help = (<<END);
+
+amin is a simple Amin controller.
+
+Any uri option can use other uris schemes
+than the example http:// ones below. This 
+includes uris like https:// file:// or ftp://.
+There are other uri schemes accepted, but 
+some may have problems... Please see LWP for
+full details. 
+
+The controller accepts the -u uri profile option 
+with any uri ie http://example.com/profile.xml. 
+
+The controller accepts the -a adminlist option
+with any uri ie http://example.com/adminlist.xml
+
+The controller accepts the -p option
+with the profile as STDIN, this is usually used
+by other scripts. 
+
+The controller accepts the -n networkmap option
+with any uri ie http://example.com/networkmap.xml
+
+The networkmap option will apply to any adminlist
+or profile(either uri or STDIN). Networkmaps inside
+of an adminlist will be processed in addition to 
+this networkmap option. 
+
+The controller accepts the -m machine spec option
+with any uri ie http://example.com/machine_spec.xml
+Changing the machine_spec will alter your machine 
+processing. Please see Amin::Machines for more
+details. 
+
+The controller accepts the -t machine type option
+with one of the available machine types. By default 
+Amin uses the Dispatcher machine type. Please 
+see Amin::Machines for more details. 
+
+You may also design your own machines and supply 
+their full module names. Please see Amin::Machine 
+for more details on building your own machine...
+
+The controller accepts the -x filter parameter option,
+which can be passed into the machine, for any processing
+by various machine filters
+
+Please perldoc the various Amin modules for more information.
+
+In terms of processing order, an adminlist is processed
+first, then a profile by uri and finally a profile by STDIN.
+You can make your own controller if you are unhappy with this
+order.
+
+END
+
+#define help
+$cli->help($help);
+
+my $usage = (<<END);
+[-h|-help]
+[-u|-uri] uri:// 
+[-p|-profile] as <STDIN>
+[-a|-adminlist] uri://
+[-n|-networkmap] uri://
+[-m|-machine_spec] uri://
+[-x|-filter_param] parameters
+[-t|-machine_type] ex. Dispatcher
+[-o|-machine_name] ex. Amin::Machine::Dispatcher
+[-g|-generator] ex. XML::SAX::PurePerl
+[-h|-handler] ex.Amin::Machine::Handler::Writer
+[-l|-log] ex. Amin::Machine::Log::Standard
+[-v|-version] 
+END
+
+$cli->usage($usage);
+
+my $version = "0.6.0";
+$cli->version($version);
+
+#pass the $cli object to the $cli's get_profile
+#this will load up the $cli object with
+#all the details from the command line
+$cli->get_opts($cli);
+
+my $machine = Amin->new(
+                Machine_Name => $cli->machine_name, 
+                Machine_Spec => $cli->machine_spec,
+                Generator => $cli->generator,
+                Handler => $cli->handler,
+                Filter_Param => $cli->filter_param,
+                Log => $cli->log,
+                Debug => $cli->debug);
+
+my $out = $machine->process($cli);
+#out is returned as an array even if it's a single profile
+$cli->print_result($out);
+
+exit;
+
+1;
