@@ -46,8 +46,7 @@ sub end_element {
 sub comment {
 	my ($self, $chars) = @_;
 	my $data = $chars->{Data};
-	$data = $self->fix_text($data);
-	#$data = $self->escape_it($data);
+	$data =~ s/(^\s+|\s+$)//gm;	
 	if ($data) {
 		push @{$self->{Spec}->{Buffer}}, "<!--" . $data . "-->";
 	}
@@ -58,7 +57,7 @@ sub escape_it {
 	my ($self, $string) = @_;
 	#$string =~ s///oge;
 	$string =~ s|\&|\&amp;|oge;
-        $string =~ s|<|\&lt;|oge;
+    $string =~ s|<|\&lt;|oge;
 	$string =~ s|>|\&gt;|oge;
 	#$string =~ s|\"|\&quot;|oge;
 	#$string =~ s|\'|\&apos;|oge;
