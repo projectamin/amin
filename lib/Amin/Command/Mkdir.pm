@@ -6,7 +6,6 @@ package Amin::Command::Mkdir;
 
 use strict;
 use warnings;
-use lib ("../../../lib");
 use vars qw(@ISA);
 use Amin::Command::Elt;
 
