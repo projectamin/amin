@@ -1,0 +1,6 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+        <amin:command name="ldconfig">
+		<amin:flag name="c">compat</amin:flag>
+                <amin:flag>v</amin:flag>
+        </amin:command>
+</amin:profile>

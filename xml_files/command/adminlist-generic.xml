@@ -1,0 +1,13 @@
+<amin:adminlist xmlns:amin="http://projectamin.org/ns/">
+   <amin:profile name="amin" uri="file://amin/xml_files/command/amin.xml"/>
+   <amin:profile name="mkdir" uri="file://amin/xml_files/command/mkdir.xml"/>
+   <amin:profile name="df" uri="file://amin/xml_files/command/df.xml"/>
+   <amin:profile name="du" uri="file://amin/xml_files/command/du.xml"/>
+   <amin:profile name="echo" uri="file://amin/xml_files/command/echo.xml"/>
+   <amin:profile name="hostname" uri="file://amin/xml_files/command/hostname.xml"/>
+   <amin:profile name="ls" uri="file://amin/xml_files/command/ls.xml"/>
+<!--
+   <amin:profile name="du" uri="file://amin/xml_files/command/ldconfig.xml"/>
+-->
+   <amin:profile name="rmdir" uri="file://amin/xml_files/command/rmdir.xml"/>
+</amin:adminlist>
