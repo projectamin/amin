@@ -7,8 +7,8 @@ package Amin::Machine::AdminList;
 use strict;
 use vars qw(@ISA);
 use XML::SAX::Base;
-#use Amin::Elt;
-@ISA = qw(XML::SAX::Base);# Amin::Elt);
+use Amin::Command::Elt;
+@ISA = qw(XML::SAX::Base Amin::Command::Elt);
 
 sub start_document {
      my $self = shift;
@@ -23,15 +23,15 @@ sub start_document {
 sub start_element {
 	my ($self, $element) = @_;
 	$self->element($element);
-     my %attrs = %{$element->{Attributes}};
-     $self->attrs(\%attrs);
-     my $names = $self->doc_name;    
-     foreach my $name (@$names) {
-          my $value = "{}" . $name;
-          if ($attrs{$value}->{Value}) {
-               $self->$name($attrs{$value}->{Value});
-          }
-     }
+  my %attrs = %{$element->{Attributes}};
+  $self->attrs(\%attrs);
+  my $names = $self->doc_name;    
+  foreach my $name (@$names) {
+      my $value = "{}" . $name;
+      if ($attrs{$value}->{Value}) {
+           $self->$name($attrs{$value}->{Value});
+      }
+  }
 }
 
 sub end_element {
@@ -67,20 +67,20 @@ sub end_element {
 }
 
 sub end_document {
-     my $self = shift;
+  my $self = shift;
 	return $self->adminlist;
 }
 
 sub get_x {
-     my $self = shift;
-     $self->{X} = shift if @_;
-     if ($self->{X}) {
-          return $self->{X};
-     } else {
-          #initial x
-          my $x = 0;
-          return $x;
-     }
+  my $self = shift;
+    $self->{X} = shift if @_;
+  if ($self->{X}) {
+    return $self->{X};
+  } else {
+    #initial x
+    my $x = 0;
+    return $x;
+  }
 }
 
 sub uri {

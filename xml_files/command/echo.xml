@@ -1,0 +1,6 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+        <amin:command name="echo">
+                <amin:flag name="n" />
+                <amin:param>some string here</amin:param>
+        </amin:command>
+</amin:profile>

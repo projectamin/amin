@@ -1,0 +1,6 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+        <amin:command name="df">
+                <amin:flag>a</amin:flag>
+		<amin:shell name="dir">/tmp/amin-tests/</amin:shell>
+        </amin:command>
+</amin:profile>

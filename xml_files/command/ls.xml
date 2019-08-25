@@ -1,0 +1,6 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+       <amin:command name="ls">
+                <amin:flag>lsa</amin:flag>
+                <amin:param>/tmp/amin-tests/</amin:param>
+        </amin:command>
+</amin:profile>

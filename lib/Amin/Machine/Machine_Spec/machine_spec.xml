@@ -19,5 +19,53 @@
 		<download>http://projectamin.org/filters/amin/command/mkdir.xml</download>
 		<version>1.0</version>
 	</filter>
+	<filter name="Amin::Command::Hostname">
+		<element>command</element>
+		<namespace>amin</namespace>
+		<name>hostname</name>
+		<position>middle</position>
+		<download>http://projectamin.org/filters/amin/command/hostname.xml</download>
+		<version>1.0</version>
+	</filter>
+	<filter name="Amin::Command::Df">
+		<element>command</element>
+		<namespace>amin</namespace>
+		<name>df</name>
+		<position>middle</position>
+		<download>http://projectamin.org/filters/amin/command/df.xml</download>
+		<version>1.0</version>
+	</filter>
+	<filter name="Amin::Command::Du">
+		<element>command</element>
+		<namespace>amin</namespace>
+		<name>du</name>
+		<position>middle</position>
+		<download>http://projectamin.org/filters/amin/command/du.xml</download>
+		<version>1.0</version>
+	</filter>
+	<filter name="Amin::Command::Echo">
+		<element>command</element>
+		<namespace>amin</namespace>
+		<name>echo</name>
+		<position>middle</position>
+		<download>http://projectamin.org/filters/amin/command/echo.xml</download>
+		<version>1.0</version>
+	</filter>
+	<filter name="Amin::Command::Ls">
+		<element>command</element>
+		<namespace>amin</namespace>
+		<name>ls</name>
+		<position>middle</position>
+		<download>http://projectamin.org/filters/amin/command/ls.xml</download>
+		<version>1.0</version>
+	</filter>
+	<filter name="Amin::Command::Rmdir">
+		<element>command</element>
+		<namespace>amin</namespace>
+		<name>rmdir</name>
+		<position>middle</position>
+		<download>http://projectamin.org/filters/amin/command/rmdir.xml</download>
+		<version>1.0</version>
+	</filter>	
 </machine>
 	<!-- soon!!! -->
