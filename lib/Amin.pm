@@ -22,6 +22,7 @@ $VERSION = '0.7.5';
 sub new {
 	my $class = shift;
 	my %args = @_;
+    
 	my $self;
 
     my %defaults = (

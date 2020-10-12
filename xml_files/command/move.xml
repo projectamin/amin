@@ -1,0 +1,7 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+        <amin:command name="move">
+                <amin:param name="source">limits</amin:param>
+                <amin:param name="target">limit-new</amin:param>
+                <amin:shell name="dir">/tmp/amin-tests/</amin:shell>
+        </amin:command>
+</amin:profile>

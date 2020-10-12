@@ -1,0 +1,8 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+        <amin:command name="touch">
+                <amin:param>/tmp/amin-tests/touchfile</amin:param>
+        </amin:command>
+        <amin:command name="touch">
+                <amin:param>/tmp/amin-tests/touchfile2</amin:param>
+        </amin:command>
+</amin:profile>

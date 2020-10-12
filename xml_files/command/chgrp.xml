@@ -1,0 +1,6 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+        <amin:command name="chgrp">
+                <amin:param name="group">bin</amin:param>
+                <amin:param name="target">/tmp/amin-tests/limits</amin:param>
+        </amin:command>
+</amin:profile>

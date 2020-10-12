@@ -1,0 +1,8 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+        <amin:command name="search_replace">
+                <amin:param name="target">pass</amin:param>
+                <amin:flag name='find'>root</amin:flag>
+                <amin:flag name='replace'>user</amin:flag>
+                <amin:shell name="dir">/tmp/amin-tests/</amin:shell>
+        </amin:command>
+</amin:profile>

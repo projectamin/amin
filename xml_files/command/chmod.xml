@@ -1,0 +1,6 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+        <amin:command name="chmod">
+                <amin:param name="set">0750</amin:param>
+                <amin:param name="target">/tmp/amin-tests/limits</amin:param>
+        </amin:command>
+</amin:profile>

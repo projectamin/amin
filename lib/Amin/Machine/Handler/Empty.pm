@@ -43,6 +43,19 @@ sub end_element {
 	$self->SUPER::end_element($element);
 }
 
+sub command_name {
+  my $self = shift;
+  $self->{'COMMAND_NAME'} = shift if @_;
+  return $self->{'COMMAND_NAME'};
+}
+
+sub command {
+  my $self = shift;
+  $self->{'COMMAND'} = shift if @_;
+  if (! $self->{'COMMAND'}) { $self->{'COMMAND'} = ""; }
+  return $self->{'COMMAND'};
+}
+
 1;
 
 =head1 NAME
