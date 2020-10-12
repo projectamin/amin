@@ -1,0 +1,9 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+       <amin:command name="link">
+                <amin:param name="source">original_thing</amin:param>
+                <amin:param name="target">linked_thing</amin:param>
+                <amin:flag>sf</amin:flag>
+                <amin:shell name="dir">/tmp/amin-tests/</amin:shell>
+        </amin:command>
+</amin:profile>
+

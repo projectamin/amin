@@ -1,0 +1,7 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+        <amin:command name="tail">
+                <amin:param>hg</amin:param>
+		<amin:shell name="dir">/tmp/amin-tests/</amin:shell>
+        </amin:command>
+</amin:profile>
+

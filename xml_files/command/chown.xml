@@ -1,0 +1,6 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+        <amin:command name="chown">
+                <amin:param name="ogroup">bin.bin</amin:param>
+                <amin:param name="target">/tmp/amin-tests/limits</amin:param>
+        </amin:command>
+</amin:profile>

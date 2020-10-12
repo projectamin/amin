@@ -1,0 +1,16 @@
+<amin:profile xmlns:amin='http://projectamin.org/ns/'>
+        <amin:command name="textdump">
+                <amin:param name="target">/tmp/amin-tests/pass</amin:param>
+                <amin:param name="content">root</amin:param>
+        </amin:command>
+	<amin:command name="textdump">
+		<amin:param name="target">/tmp/amin-tests/hg</amin:param>
+		<amin:param name="content">Hello
+				Does This
+			all
+	line
+		up
+right?
+</amin:param>
+	</amin:command>
+</amin:profile>

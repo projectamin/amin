@@ -1,0 +1,24 @@
+<amin:adminlist xmlns:amin="http://projectamin.org/ns/">
+   <amin:profile name="mkdir" uri="file://amin/xml_files/command/mkdir.xml"/>
+   <amin:profile name="textdump" uri="file://amin/xml_files/command/textdump.xml"/>
+   <amin:profile name="touch" uri="file://amin/xml_files/command/touch.xml"/>
+   <amin:profile name="system_command" uri="file://amin/xml_files/command/system_command.xml"/>
+   <amin:profile name="search_replace" uri="file://amin/xml_files/command/search_replace.xml"/>
+   <amin:profile name="chmod" uri="file://amin/xml_files/command/chmod.xml"/>
+   <amin:profile name="ls" uri="file://amin/xml_files/command/cat.xml"/>
+<!--
+   <amin:profile name="ls" uri="file://amin/xml_files/command/chgrp.xml"/>
+   <amin:profile name="ls" uri="file://amin/xml_files/command/chown.xml"/>
+-->
+   <amin:profile name="ls" uri="file://amin/xml_files/command/head.xml"/>
+   <amin:profile name="ls" uri="file://amin/xml_files/command/link.xml"/>
+   <amin:profile name="ls" uri="file://amin/xml_files/command/ln.xml"/>
+   <amin:profile name="ls" uri="file://amin/xml_files/command/tail.xml"/>
+   <amin:profile name="ls" uri="file://amin/xml_files/command/move.xml"/>
+   <amin:profile name="ls" uri="file://amin/xml_files/command/mv.xml"/>
+   <amin:profile name="ls" uri="file://amin/xml_files/command/copy.xml"/>
+   <amin:profile name="ls" uri="file://amin/xml_files/command/cp.xml"/>
+   <amin:profile name="ls" uri="file://amin/xml_files/command/remove.xml"/>
+   <amin:profile name="ls" uri="file://amin/xml_files/command/rm.xml"/>
+   <amin:profile name="rmdir" uri="file://amin/xml_files/command/rmdir.xml"/>
+</amin:adminlist>
