@@ -40,6 +40,7 @@ sub characters {
                     $self->mode($data);
                }
           }
+		  $self->SUPER::characters($chars);
      } else {
           $self->SUPER::characters($chars);
      }
